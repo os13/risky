@@ -1,4 +1,4 @@
-package htwg.se.risky;
+package aview;
 
 public class Risky {
 
