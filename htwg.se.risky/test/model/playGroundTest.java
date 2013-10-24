@@ -7,7 +7,7 @@ public class playGroundTest {
 	
 	@Test
 	public void testPG() {
-		playGround pg1 = new playGround(10);
+		PlayGround pg1 = new PlayGround(10);
 		assertEquals(10 , pg1.getAnzPlayer());
 	}
 }

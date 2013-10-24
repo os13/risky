@@ -1,10 +1,10 @@
 package model;
 
-public class playGround {
+public class PlayGround {
 	//hier wird das spielfeld implementiert
 	private int anzPlayer;
 	
-	public playGround(int anzPlayer) {
+	public PlayGround(int anzPlayer) {
 		this.anzPlayer = anzPlayer;
 	}
 	
