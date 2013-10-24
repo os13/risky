@@ -34,8 +34,5 @@ public class Player implements IPlayer {
 	public void moveUnits(Country srcCountry, Country desCountry,
 			int amountUnits) {
 		// TODO Auto-generated method stub
-		
 	}
-	
-
 }
