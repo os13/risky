@@ -3,7 +3,7 @@ package model;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class playerTest {
+public class PlayerTest {
 	@Test
 	public void test() {
 		Player p1 = new Player("test");

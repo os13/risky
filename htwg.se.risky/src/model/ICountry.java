@@ -1,7 +1,7 @@
 package model;
 
-public interface iCountry {
-	public void setCountryName(String name);
+public interface ICountry {
+	
 	public String getCountryName();
 	
 	public void setControllPlayer(Player cp);
@@ -12,4 +12,7 @@ public interface iCountry {
 	
 	public void addUnit (int amount);
 	public void removeUnit(int amount);
+	
+	public void setNeighbour(Country c);
+	public boolean isNeighbourOf(Country c);
 }
