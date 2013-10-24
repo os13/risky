@@ -1,15 +1,11 @@
 package model;
 
 public class Player implements IPlayer {
-	
-	private String name;
-	
+
+	private final String name;
+	private int amountAvailableUnits;
+
 	Player(String name) {
-		setPlayerName(name);
-	}
-	
-	@Override
-	public void setPlayerName(String name) {
 		this.name = name;
 	}
 
@@ -19,20 +15,25 @@ public class Player implements IPlayer {
 	}
 
 	@Override
-	public void setAvailableAmountUnits(int amount) {
-		// TODO Auto-generated method stub
+	public void setAmountAvailableUnits(int amountUnits) {
+		this.amountAvailableUnits = amountUnits;
 		
 	}
 
 	@Override
-	public int getAvailableAmountUnits() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getAmountAvailableUnits() {
+		return this.amountAvailableUnits;
 	}
 
 	@Override
 	public void moveUnits(Country srcCountry, Country desCountry,
 			int amountUnits) {
-		// TODO Auto-generated method stub
+		srcCountry.removeUnit(amountUnits);
+		desCountry.addUnit(amountUnits);
+	}
+
+	@Override
+	public void decAvailableUnit() {
+		this.amountAvailableUnits--;
 	}
 }
