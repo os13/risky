@@ -1,17 +1,17 @@
 package model;
 
-public class Country implements iCountry {
+public class Country implements ICountry {
 	
-	private String name;
+	private final String name;
 	private int amountUnits;
 	private Player controlledBy;	
-	private Country neigbourCountry[];	
+	private Country neighbourCountry[] = new Country[8];	
 	
 	
 	
 //Methods---------------------------------------------------------------------
-	@Override
-	public void setCountryName(String name) {
+	
+	public Country (String name) {
 		this.name = name;
 	}
 
@@ -47,7 +47,25 @@ public class Country implements iCountry {
 
 	@Override
 	public void removeUnit(int amount) {
-		amountUnits -= amount;
+		if (amountUnits - amount <= 0) {
+			amountUnits = 0;
+		} else {
+			amountUnits -= amount;
+		}		
 	}
 	
+	@Override
+	public void setNeighbour(Country c) {
+		neighbourCountry[neighbourCountry.length - 1] = c;		
+	}
+	
+	@Override
+	public boolean isNeighbourOf(Country c) {
+		for (int i = 0; i < neighbourCountry.length; i++) {
+			if (neighbourCountry[i] == c) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
