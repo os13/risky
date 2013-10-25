@@ -1,14 +1,15 @@
 package model;
 
 public class PlayGround {
-	//hier wird das spielfeld implementiert
-	private int anzPlayer;
-	
+	private Player players[];
+	private int amountPlayers;
+
 	public PlayGround(int anzPlayer) {
-		this.anzPlayer = anzPlayer;
+		this.amountPlayers = anzPlayer;
+		players = new Player[this.amountPlayers];
 	}
-	
+
 	public int getAnzPlayer() {
-		return this.anzPlayer;
+		return this.amountPlayers;
 	}
 }

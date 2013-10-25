@@ -1,15 +1,10 @@
 package model;
 
 public class Country implements ICountry {
-	
 	private final String name;
 	private int amountUnits;
 	private Player controlledBy;	
-	private Country neighbourCountry[] = new Country[8];	
-	
-	
-	
-//Methods---------------------------------------------------------------------
+	private Country neighbourCountry[];	
 	
 	public Country (String name) {
 		this.name = name;
