@@ -3,7 +3,7 @@ package model;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class playGroundTest {	
+public class PlayGroundTest {	
 	
 	@Test
 	public void testPG() {
