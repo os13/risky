@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class playerTest {
+public class PlayerTest {
 	@Test
 	public void test() {
 		Player p1 = new Player("test");
@@ -13,10 +13,10 @@ public class playerTest {
 		Player p2 = new Player("hallo Welt!");
 		assertEquals("hallo Welt!", p2.getPlayerName());
 
-		Country c1 = new Country();
+		Country c1 = new Country("c1");
 		c1.addUnit(30);
 
-		Country c2 = new Country();
+		Country c2 = new Country("c2");
 		c2.addUnit(15);
 
 		p1.setAmountAvailableUnits(10);
