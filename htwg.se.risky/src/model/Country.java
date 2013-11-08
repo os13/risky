@@ -1,11 +1,14 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Country implements ICountry {
 	private final String name;
 	private int amountUnits;
 	private Player controlledBy;	
-	private Country neighbourCountry[];	
-	
+	private List<Country> neightbourCountry= new ArrayList<Country>();
+
 	public Country (String name) {
 		this.name = name;
 	}
@@ -48,19 +51,19 @@ public class Country implements ICountry {
 			amountUnits -= amount;
 		}		
 	}
-	
+
 	@Override
 	public void setNeighbour(Country c) {
-		neighbourCountry[neighbourCountry.length - 1] = c;		
+		if(this.neightbourCountry.size() < 8)
+			this.neightbourCountry.add(c);
+		else
+			throw new IndexOutOfBoundsException();
 	}
-	
+
 	@Override
 	public boolean isNeighbourOf(Country c) {
-		for (int i = 0; i < neighbourCountry.length; i++) {
-			if (neighbourCountry[i] == c) {
-				return true;
-			}
-		}
+		if(this.neightbourCountry.contains(c))
+			return true;
 		return false;
 	}
 }
