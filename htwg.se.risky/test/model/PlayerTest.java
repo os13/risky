@@ -1,6 +1,6 @@
 package model;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -38,7 +38,7 @@ public class PlayerTest {
 		assertEquals(18, p2.getAmountAvailableUnits());
 
 		p1.moveUnits(c1, c2, 5);
-		
+
 		assertEquals(25, c1.getUnits());
 		assertEquals(20, c2.getUnits());
 	}

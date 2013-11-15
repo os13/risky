@@ -1,4 +1,5 @@
 package controller;
+
 /*
  * Anzahl Spieler
  * Spielfeldgröße

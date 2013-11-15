@@ -6,18 +6,18 @@ import java.util.List;
 public class Country implements ICountry {
 	private final String name;
 	private int amountUnits;
-	private Player controlledBy;	
-	private List<Country> neightbourCountry= new ArrayList<Country>();
+	private Player controlledBy;
+	private List<Country> neightbourCountry = new ArrayList<Country>();
 
-	public Country (String name) {
+	public Country(String name) {
 		this.name = name;
 		erstelleLand();
 	}
 
 	public void erstelleLand() {
-		
+
 	}
-	
+
 	@Override
 	public String getCountryName() {
 		return name;
@@ -45,7 +45,7 @@ public class Country implements ICountry {
 
 	@Override
 	public void addUnit(int amount) {
-		amountUnits += amount;		
+		amountUnits += amount;
 	}
 
 	@Override
@@ -54,21 +54,23 @@ public class Country implements ICountry {
 			amountUnits = 0;
 		} else {
 			amountUnits -= amount;
-		}		
+		}
 	}
 
 	@Override
 	public void setNeighbour(Country c) {
-		if(this.neightbourCountry.size() < 8)
+		if (this.neightbourCountry.size() < 8) {
 			this.neightbourCountry.add(c);
-		else
+		} else {
 			throw new IndexOutOfBoundsException();
+		}
 	}
 
 	@Override
 	public boolean isNeighbourOf(Country c) {
-		if(this.neightbourCountry.contains(c))
+		if (this.neightbourCountry.contains(c)) {
 			return true;
+		}
 		return false;
 	}
 }

@@ -17,7 +17,7 @@ public class Player implements IPlayer {
 	@Override
 	public void setAmountAvailableUnits(int amountUnits) {
 		this.amountAvailableUnits = amountUnits;
-		
+
 	}
 
 	@Override

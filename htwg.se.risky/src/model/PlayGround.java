@@ -8,8 +8,8 @@ public class PlayGround {
 		this.amountPlayers = anzPlayer;
 		players = new Player[this.amountPlayers];
 
-		for(int i=0; i<this.amountPlayers; i++) {
-			this.players[i] = new Player("Player" + (i+1));
+		for (int i = 0; i < this.amountPlayers; i++) {
+			this.players[i] = new Player("Player" + (i + 1));
 		}
 	}
 
