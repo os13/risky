@@ -7,11 +7,11 @@ import org.junit.Test;
 public class PlayerTest {
 	@Test
 	public void test() {
-		Player p1 = new Player("test");
-		assertEquals("test", p1.getPlayerName());
+		Player p1 = new Player("Peter");
+		assertEquals("Peter", p1.getPlayerName());
 
-		Player p2 = new Player("hallo Welt!");
-		assertEquals("hallo Welt!", p2.getPlayerName());
+		Player p2 = new Player("Sebastian");
+		assertEquals("Sebastian", p2.getPlayerName());
 
 		Country c1 = new Country("c1");
 		c1.addUnit(30);
