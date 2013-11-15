@@ -1,6 +1,6 @@
 package aview;
 
-public class Risky {
+class Risky {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

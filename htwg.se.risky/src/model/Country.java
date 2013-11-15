@@ -11,7 +11,6 @@ public class Country implements ICountry {
 
 	public Country(String name) {
 		this.name = name;
-		erstelleLand();
 	}
 
 	public void erstelleLand() {
@@ -59,7 +58,7 @@ public class Country implements ICountry {
 
 	@Override
 	public void setNeighbour(Country c) {
-		if (this.neightbourCountry.size() < 8) {
+		if (this.neightbourCountry.size() < Numbers.EIGHT) {
 			this.neightbourCountry.add(c);
 		} else {
 			throw new IndexOutOfBoundsException();
