@@ -2,21 +2,21 @@ package model;
 
 public interface ICountry {
 
-	public String getCountryName();
+	String getCountryName();
 
-	public void setControllPlayer(Player cp);
+	void setControllPlayer(Player cp);
 
-	public Player getControllPlayer();
+	Player getControllPlayer();
 
-	public void setUnits(int amount);
+	void setUnits(int amount);
 
-	public int getUnits();
+	int getUnits();
 
-	public void addUnit(int amount);
+	void addUnit(int amount);
 
-	public void removeUnit(int amount);
+	void removeUnit(int amount);
 
-	public void setNeighbour(Country c);
+	void setNeighbour(Country c);
 
-	public boolean isNeighbourOf(Country c);
+	boolean isNeighbourOf(Country c);
 }

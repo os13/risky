@@ -1,14 +1,13 @@
 package model;
 
 public interface IPlayer {
-	public String getPlayerName();
+	String getPlayerName();
 
-	public void setAmountAvailableUnits(int amountUnits);
+	void setAmountAvailableUnits(int amountUnits);
 
-	public int getAmountAvailableUnits();
+	int getAmountAvailableUnits();
 
-	public void decAvailableUnit();
+	void decAvailableUnit();
 
-	public void moveUnits(Country srcCountry, Country desCountry,
-			int amountUnits);
+	void moveUnits(Country srcCountry, Country desCountry, int amountUnits);
 }
