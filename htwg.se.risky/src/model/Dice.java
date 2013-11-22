@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Dice {
 
+	private int min, max;
 	private Random dice = new Random();
 
 	public Dice() {
@@ -11,19 +12,28 @@ public class Dice {
 	}
 
 	/**
+	 * setzt min und max
+	 * 
 	 * @param min
 	 * @param max
-	 * @return bei Erflg, die Zufallszahl, bei Misserfolg null.
-	 * 
+	 * @return false bei Misserfolg, true bei Erfolg.
 	 */
-	public Integer roll(int min, int max) {
-
+	public boolean setmm(int min, int max) {
 		if (!this.testmm(min, max)) {
-			return null;
+			return false;
 		}
+		this.min = min;
+		this.max = max;
+		return true;
+	}
 
-		int dif = max - min + 1;
-		return dice.nextInt() % dif + min;
+	/**
+	 * @return Zufallszahl zwischen gesetzten min und max.
+	 */
+	public Integer roll() {
+
+		int dif = this.max - this.min + 1;
+		return dice.nextInt() % dif + this.min;
 	}
 
 	/**
