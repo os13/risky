@@ -14,7 +14,7 @@ public class DiceTest {
 		Dice dc = new Dice();
 		assertFalse(dc.setmm(5, 1));
 		assertTrue(dc.setmm(1, 1));
-		assertEquals("1", dc.roll());
+		assertEquals(Integer.valueOf(1), dc.roll());
 
 	}
 

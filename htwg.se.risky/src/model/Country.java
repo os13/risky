@@ -13,10 +13,6 @@ public class Country implements ICountry {
 		this.name = name;
 	}
 
-	public void erstelleLand() {
-
-	}
-
 	@Override
 	public String getCountryName() {
 		return name;
