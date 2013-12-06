@@ -13,22 +13,18 @@ public class Country implements ICountry {
 		this.name = name;
 	}
 
-	public void erstelleLand() {
-
-	}
-
 	@Override
 	public String getCountryName() {
 		return name;
 	}
 
 	@Override
-	public void setControllPlayer(Player cp) {
+	public void setControlPlayer(Player cp) {
 		this.controlledBy = cp;
 	}
 
 	@Override
-	public Player getControllPlayer() {
+	public Player getControlPlayer() {
 		return controlledBy;
 	}
 
