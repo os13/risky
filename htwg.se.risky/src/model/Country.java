@@ -19,12 +19,12 @@ public class Country implements ICountry {
 	}
 
 	@Override
-	public void setControllPlayer(Player cp) {
+	public void setControlPlayer(Player cp) {
 		this.controlledBy = cp;
 	}
 
 	@Override
-	public Player getControllPlayer() {
+	public Player getControlPlayer() {
 		return controlledBy;
 	}
 

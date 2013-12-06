@@ -7,8 +7,6 @@ import static org.junit.Assert.assertTrue;
 //import org.junit.Rule;
 import org.junit.Test;
 
-//import org.junit.rules.ExpectedException;
-
 public class CountryTest {
 
 	@Test
@@ -17,8 +15,8 @@ public class CountryTest {
 		assertEquals("c1", c1.getCountryName());
 
 		Player p1 = new Player("p1");
-		c1.setControllPlayer(p1);
-		assertEquals(p1, c1.getControllPlayer());
+		c1.setControlPlayer(p1);
+		assertEquals(p1, c1.getControlPlayer());
 
 		c1.setUnits(10);
 		assertEquals(10, c1.getUnits());

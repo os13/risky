@@ -4,9 +4,9 @@ public interface ICountry {
 
 	String getCountryName();
 
-	void setControllPlayer(Player cp);
+	void setControlPlayer(Player cp);
 
-	Player getControllPlayer();
+	Player getControlPlayer();
 
 	void setUnits(int amount);
 
